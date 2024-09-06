@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Ações - Análise Avançada</title>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c;
+            color: #e0e0e0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .charts-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .chart-box {
+            width: 48%;
+            height: 600px;
+            margin-bottom: 20px;
+        }
+        .disclaimer {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard de Ações - Análise Avançada</h1>
+
+        <div class="charts-container">
+            <!-- Gráfico PETR3 -->
+            <div class="chart-box" id="chart_petr3"></div>
+            <!-- Gráfico MBLY3 -->
+            <div class="chart-box" id="chart_mbly3"></div>
+            <!-- Gráfico GGBR3 -->
+            <div class="chart-box" id="chart_ggbr3"></div>
+            <!-- Gráfico SBSP3 -->
+            <div class="chart-box" id="chart_sbsp3"></div>
+        </div>
+
+        <p class="disclaimer">Disclaimer: Este dashboard é apenas para fins informativos e não deve ser considerado como conselho financeiro.</p>
+    </div>
+
+    <!-- Scripts para cada gráfico -->
+    <script type="text/javascript">
+        // Gráfico PETR3
+        new TradingView.widget({
+            "width": "100%",
+            "height": 600,
+            "symbol": "BMFBOVESPA:PETR3",
+            "interval": "D",
+            "timezone": "America/Sao_Paulo",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "studies": ["MASimple@tv-basicstudies", "RSI@tv-basicstudies", "MACD@tv-basicstudies"],
+            "container_id": "chart_petr3",
+            "details": true,
+            "hotlist": true,
+            "calendar": true
+        });
+
+        // Gráfico MBLY3
+        new TradingView.widget({
+            "width": "100%",
+            "height": 600,
+            "symbol": "BMFBOVESPA:MBLY3",
+            "interval": "D",
+            "timezone": "America/Sao_Paulo",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "studies": ["MASimple@tv-basicstudies", "RSI@tv-basicstudies", "MACD@tv-basicstudies"],
+            "container_id": "chart_mbly3",
+            "details": true,
+            "hotlist": true,
+            "calendar": true
+        });
+
+        // Gráfico GGBR3
+        new TradingView.widget({
+            "width": "100%",
+            "height": 600,
+            "symbol": "BMFBOVESPA:GGBR3",
+            "interval": "D",
+            "timezone": "America/Sao_Paulo",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "studies": ["MASimple@tv-basicstudies", "RSI@tv-basicstudies", "MACD@tv-basicstudies"],
+            "container_id": "chart_ggbr3",
+            "details": true,
+            "hotlist": true,
+            "calendar": true
+        });
+
+        // Gráfico SBSP3
+        new TradingView.widget({
+            "width": "100%",
+            "height": 600,
+            "symbol": "BMFBOVESPA:SBSP3",
+            "interval": "D",
+            "timezone": "America/Sao_Paulo",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "toolbar_bg": "#f1f3f6",
+            "studies": ["MASimple@tv-basicstudies", "RSI@tv-basicstudies", "MACD@tv-basicstudies"],
+            "container_id": "chart_sbsp3",
+            "details": true,
+            "hotlist": true,
+            "calendar": true
+        });
+    </script>
+</body>
+</html>
